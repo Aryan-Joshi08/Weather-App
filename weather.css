@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    overflow: hidden;
+}
+
+h1{
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+.tab-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 4rem;
+}
+
+.tab{
+    color: white;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.weather-container{
+    margin-block: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    background-color: rgba(123, 152, 206, 0.5);
+    padding: 10px 30px;
+    color: white;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location-container{
+    display: none;
+}
+
+.grant-location-container.active{
+    display: flex;
+}
+
+
+
+.grant-location-container img{
+    margin-bottom: 2rem;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: white;
+}
+.para{
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+
+.loading-container{
+    display: none;
+}
+.loading-container.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-container p{
+    text-transform: uppercase;
+    color: white;
+}
+
+.user-weather{
+    display: none;
+    
+}
+
+
+.user-weather.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.name p{
+    font-size: 2rem;
+    color: white;
+}
+
+.name img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.user-weather  p[data-weatherdec] {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: white;
+}
+
+.user-weather img[data-weathericon]{
+    width: 90px;
+    height: 90px;
+}
+
+.user-weather p[data-temp] {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+.parameter-container{
+    display: flex;
+    gap: 10px 20px;
+    width: 90%;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.parameter{
+    width: 10rem;
+    max-width: 200px;
+    background-color: rgb(125, 130, 158);
+    border-radius: 5px;
+    padding: 1rem;
+    
+    display: flex;
+    justify-content: center;
+    gap: 5px 0;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+}
+
+.search-form-container{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    gap: 0 10px;
+    margin-bottom:3rem;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.search-form-container.active{
+    display: flex;
+}
+
+
+.search-form-container input{
+    all: unset;
+    width: calc(100% - 80px);
+    
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 10px;
+    background-color: rgb(125, 130, 158);
+    color: white;
+}
+
+.search-form-container input::placeholder{
+    color: white;
+}
+
+.search-form-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.search-form-container .btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: unset;
+    margin: 1px;
+}
+ 
+
+@media (max-width: 600px) {
+    .parameter {
+        width: 100%;
+    }
+}
